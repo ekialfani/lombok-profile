@@ -1,12 +1,151 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap');
 
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
     font-family: 'Quicksand', Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
 }
 
+header {
+    display: inline;
+}
+
+.jumbotron {
+    height: 400px;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 250px;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.jumbotron::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    z-index: -1;
+}
+
+.jumbotron img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -2;
+}
+
+nav {
+   padding: 25px;
+   position: sticky;
+   top: 0;
+   background-color: rgb(6 182 212); 
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav a {
+    font-size: 15px;
+    margin-right: 20px;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: lightblue;
+}
+
+.featured-image {
+    width: 100%;
+    max-height: 400px;
+    object-position: center;
+    object-fit: cover;
+}
+
+main {
+    margin: auto;
+    padding: 30px;
+    background-color: #eee;
+    overflow: auto;
+}
+
+content {
+    width: 70%;
+    float: left;
+}
+
+aside {
+    width: 25%;
+    text-align: center;
+    float: right;
+}
+
+h2, h3 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+article {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: white;
+}
+
+content figcaption,
+content figcaption a {
+    font-size: 12px;
+    text-decoration: none;
+    margin-top: 5px;
+    color: #999;
+}
+
+article p {
+    font-size: 15px;
+    text-align: justify;
+    margin-top: 20px;
+    color: #888;
+}
+
+.profile section {
+    text-align: left;
+    margin-top: 20px;
+}
+
+
+.profile img {
+    width: 150px;
+}
+
+footer {
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    padding: 25px;
+    color: white;
+    background-color: rgb(6 182 212);
+}
+
+/* responsive breakpoints */
+@media screen and (max-width: 768px){
+	content , aside {
+		width: 100%;
+		padding: 0;
+	}
+}
