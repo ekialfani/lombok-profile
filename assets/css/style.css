@@ -143,9 +143,59 @@ footer {
 }
 
 /* responsive breakpoints */
+/*tablet*/
 @media screen and (max-width: 768px){
 	content , aside {
 		width: 100%;
 		padding: 0;
 	}
+}
+
+
+/*mobile*/
+@media screen and (max-width: 480px){
+    .jumbotron {
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 1.2em;
+        margin-top: 20px;
+    }
+
+    h3 {
+        font-size: 1em;
+        margin-top: 20px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    nav {
+        padding: 15px;
+    }
+
+    nav a {
+        font-size: 12px;
+        margin-right: 10px;
+    }
+
+    article p {
+        font-size: 12px;
+        margin-top: 10;
+    }
+
+    content figcaption,
+    content figcaption a {
+        font-size: 10px;
+    }
+
+    aside figcaption, table {
+        font-size: 13px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
 }
