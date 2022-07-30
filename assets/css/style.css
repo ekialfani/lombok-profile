@@ -8,6 +8,9 @@
 
 body {
     font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+    background-color: #f8fafc;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 
 header {
@@ -52,7 +55,11 @@ nav {
    padding: 25px;
    position: sticky;
    top: 0;
-   background-color: rgb(6 182 212); 
+   background-color: rgb(6 182 212);
+}
+
+.shadow {
+    box-shadow: 0 4px 6px -1px rgb(0,0,0,0.1), 0 2px 4px -2px rgb(0,0,0,0.1);
 }
 
 nav ul li {
@@ -62,13 +69,17 @@ nav ul li {
 nav a {
     font-size: 15px;
     margin-right: 20px;
-    color: white;
+    color: #dbeafe;
     font-weight: 600;
     text-decoration: none;
 }
 
-nav a:hover {
-    color: lightblue;
+nav li a:hover {
+    color: white;
+}
+
+.color-white {
+    color: white;
 }
 
 .featured-image {
@@ -81,7 +92,6 @@ nav a:hover {
 main {
     margin: auto;
     padding: 30px;
-    background-color: #eee;
     overflow: auto;
 }
 
@@ -105,7 +115,9 @@ h2, h3 {
 article {
     margin-top: 50px;
     padding: 20px;
+    border-radius: 10px;
     background-color: white;
+    box-shadow: 0 4px 6px -1px rgb(0,0,0,0.1), 0 2px 4px -2px rgb(0,0,0,0.1);
 }
 
 content figcaption,
@@ -120,6 +132,7 @@ article p {
     font-size: 15px;
     text-align: justify;
     margin-top: 20px;
+    line-height: 1.5;
     color: #888;
 }
 
@@ -158,6 +171,11 @@ footer {
         font-size: 18px;
     }
 
+    nav a {
+        font-size: 13px;
+        margin-right: 10px;
+    }
+
     h2 {
         font-size: 1.2em;
         margin-top: 20px;
@@ -172,17 +190,8 @@ footer {
         padding: 15px;
     }
 
-    nav {
-        padding: 15px;
-    }
-
-    nav a {
-        font-size: 12px;
-        margin-right: 10px;
-    }
-
     article p {
-        font-size: 12px;
+        font-size: 13px;
         margin-top: 10;
     }
 
@@ -196,6 +205,6 @@ footer {
     }
 
     footer {
-        font-size: 12px;
+        font-size: 13px;
     }
 }
