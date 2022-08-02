@@ -9,25 +9,25 @@ menu.forEach(m => {
 
 		if(e.target.textContent === "Sejarah"){
 			window.scrollTo({
-				top: 460,
+				top: 500,
 				behavior: 'smooth'
 			})
 			
 		}else if(e.target.textContent === "Geografis"){
 			window.scrollBy({
-				top: 1560 - window.pageYOffset,
+				top: 1660 - window.pageYOffset,
 				behavior: 'smooth'
 			})
 			
 		}else if(e.target.textContent === "Adat & Budaya"){
 			window.scrollBy({
-				top: 2443 - window.pageYOffset,
+				top: 2580 - window.pageYOffset,
 				behavior: 'smooth'
 			})
 
 		}else {
 			window.scrollBy({
-				top: 3212 - window.pageYOffset,
+				top: 3380 - window.pageYOffset,
 				behavior: 'smooth'
 			})
 		}
@@ -40,7 +40,7 @@ menu.forEach(m => {
 const navbar = document.querySelector('nav');
 
 window.addEventListener('scroll', function(){
-	if(this.pageYOffset > 460){
+	if(window.pageYOffset > 460){
 		navbar.classList.add('shadow');
 	}else {
 		navbar.classList.remove('shadow');
