@@ -1,35 +1,54 @@
 const menu = document.querySelectorAll('li');
 const anchor = document.querySelectorAll('li a');
 
+function scrollingTo(position){
+	window.scrollTo({
+		top: position,
+		behavior: 'smooth'
+	})
+}
+
 menu.forEach(m => {
 	m.addEventListener('click', function(e){
+		const target = e.target;
+
 		anchor.forEach(a => a.classList.remove('color-white'));
 
-		e.target.classList.add('color-white');
+		target.classList.add('color-white');
 
-		if(e.target.textContent === "Sejarah"){
-			window.scrollTo({
-				top: 500,
-				behavior: 'smooth'
-			})
-			
-		}else if(e.target.textContent === "Geografis"){
-			window.scrollBy({
-				top: 1660 - window.pageYOffset,
-				behavior: 'smooth'
-			})
-			
-		}else if(e.target.textContent === "Adat & Budaya"){
-			window.scrollBy({
-				top: 2580 - window.pageYOffset,
-				behavior: 'smooth'
-			})
+		const screenWidth = window.innerWidth;
 
-		}else {
-			window.scrollBy({
-				top: 3380 - window.pageYOffset,
-				behavior: 'smooth'
-			})
+		if(target.classList.contains('sejarah')){
+			if(screenWidth < 480){
+				scrollingTo(430);
+			}else {
+				scrollingTo(450);	
+			}
+		}
+
+		if(target.classList.contains('geografis')){
+			if(screenWidth < 480){
+				scrollingTo(1850);
+
+			}else {
+				scrollingTo(1570);	
+			}
+		}
+
+		if(target.classList.contains('budaya')){
+			if(screenWidth < 480){
+				scrollingTo(2810);
+			}else {
+				scrollingTo(2480);	
+			}
+		}
+
+		if(target.classList.contains('wisata')) {
+			if(screenWidth < 480){
+				scrollingTo(3480);
+			}else {
+				scrollingTo(3270);	
+			}
 		}
 
 		e.preventDefault();
