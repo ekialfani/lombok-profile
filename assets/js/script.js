@@ -28,26 +28,32 @@ menu.forEach(m => {
 
 		if(target.classList.contains('geografis')){
 			if(screenWidth < 480){
-				scrollingTo(1850);
+				scrollingTo(1890);
 
+			}else if(screenWidth <= 768){
+				scrollingTo(1620)
 			}else {
-				scrollingTo(1570);	
+				scrollingTo(1614);	
 			}
 		}
 
 		if(target.classList.contains('budaya')){
 			if(screenWidth < 480){
-				scrollingTo(2810);
+				scrollingTo(2870);
+			}else if(screenWidth <= 768){
+				scrollingTo(2630)
 			}else {
-				scrollingTo(2480);	
+				scrollingTo(2530);	
 			}
 		}
 
 		if(target.classList.contains('wisata')) {
 			if(screenWidth < 480){
-				scrollingTo(3480);
+				scrollingTo(3550);
+			}else if(screenWidth <= 768){
+				scrollingTo(3470)
 			}else {
-				scrollingTo(3270);	
+				scrollingTo(3320);	
 			}
 		}
 
@@ -59,6 +65,8 @@ menu.forEach(m => {
 const navbar = document.querySelector('nav');
 
 window.addEventListener('scroll', function(){
+	console.log(window.pageYOffset);
+
 	if(window.pageYOffset > 460){
 		navbar.classList.add('shadow');
 	}else {
